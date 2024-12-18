@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, Put } from '@nestjs/common';
 import { CellRepository } from './cell.repository';
 
 
@@ -16,4 +16,7 @@ export class CellController {
   async listUsuario() {
     return this.cellRepository.listar()
   }
+
+  @Put() 
+  async updateCelular(@Body() )
 }
